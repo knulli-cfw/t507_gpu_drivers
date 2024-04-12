@@ -43,13 +43,7 @@ typedef fbdev_window * EGLNativeWindowType;
 
 typedef int32_t EGLNativePixmapType;
 
-#if defined(EGL_FBDEV) && EGL_FBDEV
 typedef void * EGLNativeDisplayType;
-#elif defined(EGL_DUMMY) && EGL_DUMMY
-typedef dummy_display * EGLNativeDisplayType;
-#else
-#error "Window system unknown"
-#endif
 
 typedef EGLNativeWindowType NativeWindowType;
 typedef EGLNativePixmapType NativePixmapType;
